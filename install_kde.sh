@@ -26,7 +26,7 @@ sudo systemctl enable sddm
 #sudo pacman -S kde-applications
 
 # If you decide not to install the bulk KDE applications below, here are a few I still recommend (uncomment the line below to install them)
-sudo pacman -S --noconfirm kate ark okular
+#sudo pacman -S --noconfirm kate ark okular
 
 # Install ufw firewall and gui app
 sudo pacman -S ufw gufw
