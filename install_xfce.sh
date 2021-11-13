@@ -6,6 +6,7 @@
 
 # Ensure system clock is accurate
 sudo timedatectl set-ntp true
+sudo hwclock --systohc
 
 # Set the mirrorlist using 'reflector'
 sudo reflector -c 'United States' -a 10 --sort rate --save /etc/pacman.d/mirrorlist
