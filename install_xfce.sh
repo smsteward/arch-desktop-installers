@@ -1,8 +1,10 @@
 #!/bin/sh
 
-# It is assumed that you have already partitioned your disks and used 'pacstrap' to install the base system
-# If you haven't done this already, go back and do it now before continuing on with this script
-# An example base system install could be: 'base linux base-devel linux-firmware amd-ucode git vim'
+# It is assumed that you have already partitioned your disks and used 'pacstrap' to install the base system, and are chrooted into your new Arch install by using 'arch-chroot /mnt', assuming you have been following the installation guide and mounted your install at '/mnt'. Adjust your path as necessary, but you need to be in your newly installed system for this script to have any effect
+# Go back and do this if necessary before proceeding
+# Make sure that you have 'reflector' installed before proceeding: "sudo pacman -S reflector"
+
+########################################################################################
 
 # Ensure system clock is accurate
 sudo timedatectl set-ntp true
@@ -28,3 +30,5 @@ sudo systemctl enable ufw
 /bin/echo -e "\e[1;32mREBOOTING IN 5..4..3..2..1..\e[0m"
 sleep 5
 sudo reboot
+
+########################################################################################
