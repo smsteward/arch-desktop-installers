@@ -16,10 +16,6 @@ if [ "$(id -u)" = 0 ]; then
 	exit 1
 fi
 
-error() { \
-	clear; printf "ERROR:\\n%s\\n" "$1" >&2; exit 1;
-}
-
 # Ensure system clock is accurate
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
