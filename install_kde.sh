@@ -28,15 +28,21 @@ git clone https://aur.archlinux.org/paru.git
 cd paru/
 makepkg -si --noconfirm
 
-# Install the KDE Plasma desktop environment with SDDM display manager and firefox
-sudo pacman -S --noconfirm xorg sddm plasma firefox
+# Install the KDE Plasma desktop environment with SDDM display manager
+sudo pacman -S --noconfirm xorg sddm plasma
 sudo systemctl enable sddm
 
-# If you want to install some of the default KDE applications, uncomment the line below
+# Extra applications for KDE. Most are simply bloatware, so I don't recommend installing this package, but to each their own.
 #sudo pacman -S kde-applications
 
-# If you decide not to install the bulk KDE applications below, here are a few I still recommend (uncomment the line below to install them)
-#sudo pacman -S --noconfirm kate ark okular
+# These are the KDE applications that I do recommend installing (Kate = text editor, Ark = archive manager, Okular = document viewer)
+sudo pacman -S --noconfirm kate ark okular
+
+# I do a lot of theming, so these are some of the stock apps I have on my KDE desktop
+sudo pacman -S --noconfirm latte-dock kvantum-qt5
+
+# Miscellaneous apps (web browser, email client, etc)
+sudo pacman -S --noconfirm thunderbird firefox htop pass vlc neofetch libreoffice
 
 # Install ufw firewall and gui app
 sudo pacman -S ufw gufw
