@@ -42,7 +42,7 @@ sudo pacman -S --noconfirm kate ark okular
 sudo pacman -S --noconfirm latte-dock kvantum-qt5
 
 # Miscellaneous apps (web browser, email client, etc)
-sudo pacman -S --noconfirm thunderbird firefox htop pass vlc neofetch libreoffice
+sudo pacman -S --noconfirm thunderbird firefox htop pass vlc neofetch libreoffice-fresh
 
 # Install ufw firewall and gui app
 sudo pacman -S ufw gufw
