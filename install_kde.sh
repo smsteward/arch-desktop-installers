@@ -7,7 +7,7 @@
 ########################################################################################
 
 # Ensure the user is not running as root
-if ["$(id -u)" = 0 ]; then
+if [ "$(id -u)" = 0 ]; then
 	echo "######################################################################"
 	echo "You shouldn't run this script as root."
 	echo "Switch to a normal user with 'sudo' rights and run this script again."
