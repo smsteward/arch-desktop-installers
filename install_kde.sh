@@ -36,13 +36,13 @@ sudo systemctl enable sddm
 #sudo pacman -S kde-applications
 
 # These are the KDE applications that I do recommend installing (Kate = text editor, Ark = archive manager, Okular = document viewer)
-sudo pacman -S --noconfirm kate ark okular
+sudo pacman -S --noconfirm kwrite ark okular
 
 # I do a lot of theming, so these are some of the stock apps I have on my KDE desktop
 sudo pacman -S --noconfirm latte-dock kvantum-qt5
 
 # Miscellaneous apps (web browser, email client, etc)
-sudo pacman -S --noconfirm thunderbird firefox htop pass vlc neofetch libreoffice-fresh
+sudo pacman -S --noconfirm thunderbird htop pass vlc neofetch libreoffice-fresh
 
 # Install ufw firewall and gui app
 sudo pacman -S ufw gufw
