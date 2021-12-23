@@ -15,27 +15,18 @@ if [ "$(id -u)" = 0 ]; then
 	exit 1
 fi
 
-# Ensure system clock is accurate
-sudo timedatectl set-ntp true
-sudo hwclock --systohc
-
-# Set the mirrorlist using 'reflector'
-sudo pacman -S --needed reflector
-sudo reflector -c 'United States' -a 6 --sort rate --save /etc/pacman.d/mirrorlist
-
 # Install 'paru' AUR helper
 git clone https://aur.archlinux.org/paru.git
 cd paru/
-makepkg -si --noconfirm
+makepkg -si
 
 # Install librewolf web browser
 paru -S librewolf-bin
 
 # Install the KDE Plasma desktop environment with SDDM display manager and pipewire with wireplumber
-sudo pacman -S --noconfirm xorg sddm plasma networkmanager pipewire pipewire-pulse wireplumber
+sudo pacman -S --noconfirm xorg sddm plasma pipewire pipewire-pulse wireplumber
 systemctl --user enable --now wireplumber
 sudo systemctl enable sddm
-sudo systemctl enable NetworkManager
 
 # Extra applications for KDE. Most are simply bloatware, so I don't recommend installing this package, but to each their own.
 #sudo pacman -S kde-applications
